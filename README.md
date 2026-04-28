@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio website showcasing my work in **Data Science, Machine Learning, and Analytics**.
 
-🔗 Live Website: https://your-netlify-link.netlify.app  
+🔗 Live Website: https://shreenath-pangal.netlify.app  
 📂 GitHub Repo: https://github.com/Shreekp16/your-repo-name
 
 ---
