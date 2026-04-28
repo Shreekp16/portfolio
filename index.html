@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shreenath Pangal | Portfolio</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+
+
+  
+<<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg fixed-top"
+     style="background:#07111f; padding:15px 0; z-index:1000;">
+
+  <div class="container">
+
+    <a class="navbar-brand" href="#" style="color:#fff; font-weight:700;">
+      Shreenath Pangal<span style="color:#4cc9f0;">.</span>
+    </a>
+
+    <!-- HAMBURGER -->
+    <button class="navbar-toggler"
+      type="button"
+      onclick="openMenu()"
+      style="border:none;">
+      <span style="display:block; width:25px; height:3px; background:#fff; margin:5px 0;"></span>
+      <span style="display:block; width:25px; height:3px; background:#fff; margin:5px 0;"></span>
+      <span style="display:block; width:25px; height:3px; background:#fff; margin:5px 0;"></span>
+    </button>
+
+    <!-- DESKTOP MENU -->
+    <div class="collapse navbar-collapse d-none d-lg-flex">
+
+      <ul class="navbar-nav ms-auto" style="gap:20px;">
+        <li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- BUTTON -->
+      <button type="button"
+        data-bs-toggle="modal"
+        data-bs-target="#resumeModal"
+        style="background:#4cc9f0; padding:8px 16px; border:none; border-radius:20px; margin-left:15px;">
+        View Resume
+      </button>
+
+    </div>
+  </div>
+</nav>
+
+<!-- ================= MOBILE MENU ================= -->
+<!-- ================= MOBILE MENU ================= -->
+<!-- ================= MOBILE MENU ================= -->
+<div id="mobileMenu"
+     style="
+       position:fixed;
+       top:70px;
+       right:-100%;
+       width:260px;
+       height:calc(100% - 70px);
+       background:#07111f;
+       padding:30px 20px;
+       transition: right 0.35s ease;
+       z-index:1050;
+     ">
+
+  <ul style="list-style:none; padding:0;">
+    <li><a href="#about" onclick="closeMenu()" style="color:#fff; display:block; padding:12px 0;">About</a></li>
+    <li><a href="#skills" onclick="closeMenu()" style="color:#fff; display:block; padding:12px 0;">Skills</a></li>
+    <li><a href="#projects" onclick="closeMenu()" style="color:#fff; display:block; padding:12px 0;">Projects</a></li>
+    <li><a href="#contact" onclick="closeMenu()" style="color:#fff; display:block; padding:12px 0;">Contact</a></li>
+  </ul>
+
+  <button
+    onclick="closeMenu()"
+    data-bs-toggle="modal"
+    data-bs-target="#resumeModal"
+    style="
+      background:#4cc9f0;
+      padding:10px 18px;
+      border:none;
+      border-radius:20px;
+      margin-top:20px;
+      font-weight:600;
+    ">
+    View Resume
+  </button>
+</div>
+
+
+<!-- ================= OVERLAY ================= -->
+<div id="overlay"
+     onclick="closeMenu()"
+     style="
+       position:fixed;
+       top:0;
+       left:0;
+       width:100%;
+       height:100%;
+       background:rgba(7,17,31,0.5);
+       backdrop-filter: blur(2px);
+       display:none;
+       z-index:1040;
+       transition: 0.3s ease;
+     ">
+</div>
+
+</div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= JS ================= -->
+ 
+<script>
+function openMenu() {
+  if (window.innerWidth < 992) {
+    document.getElementById("mobileMenu").style.right = "0";
+    document.getElementById("overlay").style.display = "block";
+  }
+}
+
+function closeMenu() {
+  document.getElementById("mobileMenu").style.right = "-100%";
+  document.getElementById("overlay").style.display = "none";
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+<!-- About Section -->
+<section class="about-section" id="about">
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <!-- LEFT -->
+      <div class="col-lg-7">
+        <div class="eyebrow">About</div>
+
+        <h1 class="about-title">
+          Data-driven thinking,<br>
+          <span class="accent">real-world execution.</span>
+        </h1>
+
+        <p class="about-subtitle">
+<strong>I’m <strong>Shreenath Pangal</strong>, a <strong>B.Tech (CSE)</strong> graduate from <strong>Shreeyash College of Engineering</strong> and an aspiring data scientist. I work with Python, SQL, and machine learning to analyze data, uncover insights, and build practical solutions.</strong>
+        <div class="about-actions">
+          <a href="#projects" class="btn-primary-custom">Projects</a>
+          <a href="#contact" class="btn-secondary-custom">Contact</a>
+          <a href="#"
+        data-bs-toggle="modal"
+        data-bs-target="#resumeModal"
+        class="resume-btn ms-3"
+        style="
+            padding:14px 16px;
+            border-radius:999px;
+            background:#4cc9f0;
+            color:#08111b;
+            font-size:0.85rem;
+            font-weight:600;
+            text-decoration:none;
+            transition:all 0.25s ease;
+            display:inline-block;
+        "
+        onmouseover="this.style.background='#67d4f4'; this.style.transform='translateY(-2px)'"
+        onmouseout="this.style.background='#4cc9f0'; this.style.transform='translateY(0)'"
+        >
+        Download Resume
+        </a>
+        </div>
+      </div>
+
+     <!-- RIGHT -->
+      <div class="col-lg-5">
+        <div class="about-panel">
+
+          <!-- Profile Header -->
+          <div class="profile-header" style="display:flex; align-items:center; gap:15px;">
+
+            <div class="profile-visual"
+                data-bs-toggle="modal"
+                data-bs-target="#profileModal"
+                style="
+                    width:90px;
+                    height:90px;
+                    border-radius:12px;
+                    overflow:hidden;
+                    cursor:pointer;
+                    border:2px solid rgba(76,201,240,0.4);
+                    transition:all 0.3s ease;
+                "
+                onmouseover="this.style.transform='scale(1.06)'; this.style.boxShadow='0 0 18px rgba(76,201,240,0.5)'"
+                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'"
+                >
+                <img src="images/11.jpg"
+                    alt="Profile"
+                    style="
+                    width:100%;
+                    height:100%;
+                    object-fit:cover;
+                    border-radius:12px;
+                    transition:transform 0.4s ease;
+                    "
+                    onmouseover="this.style.transform='scale(1.12)'"
+                    onmouseout="this.style.transform='scale(1)'"
+                >
+                </div>
+
+            <div class="profile-meta">
+              <div class="panel-badge">Profile Snapshot</div>
+
+              <div class="animated-role">
+                Focused on <span class="role-text" id="roleText">Data Science</span>
+              </div>
+
+              <div class="panel-subtext">
+                Click the profile to view full image
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Stats -->
+        <div class="stats-grid">
+
+        <div class="stat-card">
+            <div class="stat-number">12+</div>
+            <div class="stat-label">Projects Built</div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-number">6+</div>
+            <div class="stat-label">Technologies Used</div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-number">2+</div>
+            <div class="stat-label">Internships</div>
+        </div>
+
+        </div>
+
+          <!-- Info -->
+          <div class="info-grid">
+            <div class="info-item">
+              <div class="info-label">Focus</div>
+              <div class="info-value">Data Science,Data Analytics & ML</div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-label">Stack</div>
+              <div class="info-value">Python • Stats • SQL • PowerBi • ML/AI • GEN Ai & Agentic Ai</div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-label">Approach</div>
+              <div class="info-value">Learn → Build → Improve</div>
+            </div>
+          </div>
+
+          <!-- Note -->
+          <div class="bottom-note">
+            I enjoy solving real-world problems and turning ideas into working solutions.
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Profile Image Modal -->
+<div class="modal fade" id="profileModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" style="background: transparent; border: none;">
+      <div class="modal-body text-center p-0">
+        <img src="images/11.jpg"
+             alt="Profile"
+             style="
+               width: 100%;
+               border-radius: 16px;
+               box-shadow: 0 0 25px rgba(0,0,0,0.6);
+             ">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="resumeModal">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content" style="background:#000; border:none; position:relative;">
+
+      <button class="btn btn-light"
+              style="position:absolute; top:10px; right:10px; z-index:10;"
+              data-bs-dismiss="modal">X
+      </button>
+
+      <div class="modal-body p-0">
+        <iframe src="certificates/shreenath_resume.pdf"
+                width="100%"
+                height="650px"
+                style="border:none;">
+        </iframe>
+      </div>
+
+    </div>
+  </div>
+</div>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+<script>
+  const roles = [
+    "Data Science",
+    "Machine Learning",
+    "Python",
+    "SQL",
+    "Data Analytics",
+    "Problem Solving",
+  ];
+
+  const roleText = document.getElementById("roleText");
+
+  if (roleText) {
+    let index = 0;
+
+    setInterval(() => {
+      index = (index + 1) % roles.length;
+
+      roleText.style.opacity = "0";
+
+      setTimeout(() => {
+        roleText.textContent = roles[index];
+        roleText.style.opacity = "1";
+      }, 250);
+    }, 2200);
+  }
+</script>
+
+  <!-- skills-section -->
+<section class="skills-section" id="skills">
+  <div class="container">
+
+    <div class="skills-header text-center">
+      <h1 class="skills-main-title">Technical Skills</h1>
+      <h4 class="skills-subtitle">
+        A focused set of skills I use for programming, data analysis, and machine learning.
+      </h4>
+    </div>
+
+    <div class="skills-wrapper">
+      <div class="skills-row">
+
+        <!-- Card -->
+        <div class="skill-card">
+          <div class="skill-box">
+            <div class="skill-top">
+              <div class="skill-icon-box">💻</div>
+              <div>
+                <div class="skill-badge">Programming & Logic</div>
+                <h3 class="skill-title">Core Development Skills</h3>
+                <p class="skill-line">Foundations for coding & problem solving.</p>
+              </div>
+            </div>
+            <div class="skill-list">
+              <span>Python</span><span>SQL</span>
+              <span>Data Structures</span><span>Problem Solving</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-box">
+            <div class="skill-top">
+              <div class="skill-icon-box">📊</div>
+              <div>
+                <div class="skill-badge">Data Science</div>
+                <h3 class="skill-title">Working With Data</h3>
+                <p class="skill-line">Cleaning, analysis & visualization.</p>
+              </div>
+            </div>
+            <div class="skill-list">
+              <span>Pandas</span><span>NumPy</span>
+              <span>Matplotlib</span><span>Seaborn</span><span>PowerBI</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-box">
+            <div class="skill-top">
+              <div class="skill-icon-box">🤖</div>
+              <div>
+                <div class="skill-badge">Machine Learning</div>
+                <h3 class="skill-title">Model Building</h3>
+                <p class="skill-line">Prediction & AI systems.</p>
+              </div>
+            </div>
+            <div class="skill-list">
+              <span>Scikit-learn</span><span>Supervised</span>
+              <span>Unsupervised</span><span>Feature Engineering</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-box">
+            <div class="skill-top">
+              <div class="skill-icon-box">🚀</div>
+              <div>
+                <div class="skill-badge">Tools</div>
+                <h3 class="skill-title">Workflow</h3>
+                <p class="skill-line">Development & deployment tools.</p>
+              </div>
+            </div>
+            <div class="skill-list">
+              <span>Git</span><span>GitHub</span>
+              <span>Netlify</span><span>VS Code</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+const slider = document.querySelector(".skills-row");
+
+if (window.innerWidth <= 768) {
+  // mobile → no need
+} else {
+  slider.addEventListener("wheel", (e) => {
+    if (e.deltaY !== 0) {
+      e.preventDefault();
+      slider.scrollBy({
+        left: e.deltaY * 0.7,
+        behavior: "smooth"
+      });
+    }
+  }, { passive: false });
+}
+</script>
+
+<!-- project section  -->
+
+
+<section class="projects-section" id="projects">
+  <div class="container">
+    <div class="projects-header text-center">
+      <span class="projects-label">Projects</span>
+      <h2 class="projects-main-title">Selected Work</h2>
+      <p class="projects-subtitle">
+        A few projects that reflect my practical learning in data science,
+        machine learning, and problem-solving.
+      </p>
+    </div>
+
+<!-- Project 1 -->
+<div class="project-showcase-row">
+  <div class="project-text">
+    <div class="project-meta">
+      <span class="project-number">01</span>
+      <span class="project-category">Machine Learning</span>
+    </div>
+
+    <h3 class="project-title">Stock Price Analysis</h3>
+
+    <p class="project-description">
+      Built a data analysis and machine learning workflow to study historical stock prices,
+      identify trends, and support better investment decision-making.
+    </p>
+
+    <div class="project-highlights">
+      <div>Analyzed historical stock market data to identify trends</div>
+      <div>Visualized price movements and market patterns</div>
+      <div>Applied predictive techniques for future price insights</div>
+    </div>
+
+    <div class="project-tech-stack">
+      <span>Python</span>
+      <span>Pandas</span>
+      <span>Matplotlib</span>
+      <span>Scikit-learn</span>
+    </div>
+
+    <div class="project-actions">
+      <a href="#" class="project-btn-primary">View Project</a>
+      <!-- <a href="https://github.com/Shreekp16/Stock-Price-Analysis" target="_blank" class="project-btn-secondary">GitHub</a> -->
+    </div>
+  </div>
+
+  <div class="project-visual project-visual-one" style="position: relative; overflow: hidden; border-radius: 20px; min-height: 320px;">
+    <img
+      src="images/analyzing-stock-market-data.jpg"
+      alt="Stock Price Analysis Project"
+      style="
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        inset: 0;
+        display: block;
+      "
+    >
+
+    <div
+      style="
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(0,0,0,0.78), rgba(0,0,0,0.25));
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 24px;
+        color: white;
+      "
+    >
+      <div class="visual-overlay-tag">Featured Work</div>
+      <div class="visual-icon">📈</div>
+      <h4 style="margin: 10px 0 6px 0;">Stock Market Insights</h4>
+      <p style="margin: 0;">Trend analysis & prediction</p>
+    </div>
+  </div>
+</div>
+
+   <!-- Project 2 -->
+<div class="project-showcase-row reverse-layout">
+  <div class="project-text">
+    <div class="project-meta">
+      <span class="project-number">02</span>
+      <span class="project-category">Data Analysis</span>
+    </div>
+
+    <h3 class="project-title">Customer Insights Dashboard</h3>
+
+    <p class="project-description">
+      Analyzed customer data to uncover behavior patterns, trends, and actionable insights
+      that support data-driven business decisions.
+    </p>
+
+    <div class="project-highlights">
+      <div>Explored structured customer datasets for insights</div>
+      <div>Visualized trends using data analysis techniques</div>
+      <div>Converted raw data into meaningful business insights</div>
+    </div>
+
+    <div class="project-tech-stack">
+      <span>Python</span>
+      <span>SQL</span>
+      <span>Pandas</span>
+      <span>Matplotlib</span>
+    </div>
+
+    <div class="project-actions">
+      <a href="#" class="project-btn-primary">View Project</a>
+    </div>
+  </div>
+
+  <!-- IMAGE SIDE -->
+  <div class="project-visual project-visual-two"
+       style="
+         position:relative;
+         width:100%;
+         min-height:320px;
+         border-radius:20px;
+         overflow:hidden;
+       ">
+
+    <!-- Image -->
+    <img src="images/customer-dashboard.jpg"
+         alt="Customer Dashboard Project"
+         style="
+           width:100%;
+           height:100%;
+           object-fit:cover;
+           position:absolute;
+           inset:0;
+         ">
+
+    <!-- Overlay -->
+    <div style="
+      position:absolute;
+      inset:0;
+      background:linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.2));
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-end;
+      padding:20px;
+      color:#fff;
+    ">
+      <div class="visual-overlay-tag">Analytics Project</div>
+      <div class="visual-icon">📊</div>
+      <h4 style="margin:8px 0;">Customer Trends</h4>
+      <p style="margin:0;">Insights from data patterns</p>
+    </div>
+
+  </div>
+</div>
+    <!-- Project 3 -->
+    <div class="project-showcase-row">
+      <div class="project-text">
+        <div class="project-meta">
+          <span class="project-number">03</span>
+          <span class="project-category">AI Prototype</span>
+        </div>
+
+        <h3 class="project-title">AI Chatbot Prototype</h3>
+
+        <p class="project-description">
+          Developed a simple AI chatbot prototype to demonstrate
+          user interaction flow and structured intelligent responses.
+        </p>
+
+        <div class="project-highlights">
+          <div>Designed conversation flow and response handling</div>
+          <div>Built a practical AI interaction concept</div>
+          <div>Focused on clean logic and user experience</div>
+        </div>
+
+        <div class="project-tech-stack">
+          <span>Python</span>
+          <span>AI</span>
+          <span>NLP Basics</span>
+          <span>Logic Flow</span>
+        </div>
+
+        <div class="project-actions">
+          <a href="#" class="project-btn-primary">View Project</a>
+          <a href="#" class="project-btn-secondary">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-visual project-visual-three">
+        <div class="visual-overlay-tag">Prototype</div>
+        <div class="visual-icon">🤖</div>
+        <h4>AI Chat Flow</h4>
+        <p>Interactive response-based system</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS SECTION -->
+<section class="cert-section" id="certifications">
+  <div class="container">
+
+    <div class="cert-header text-center">
+      <span class="cert-label">Certifications</span>
+      <h2 class="cert-title">Learning & Credentials</h2>
+      <p class="cert-subtitle">
+        Certifications and internships reflecting my practical learning.
+      </p>
+    </div>
+
+    <div class="cert-scroll">
+
+      <!-- CERT 1 -->
+      <div class="cert-item">
+        <div class="cert-left">
+          <div class="cert-name">Web Developer Internship <span>•</span>on-site</div>
+          <div class="cert-org">Innoway Technology</div>
+        </div>
+        <div class="cert-right">
+          <span class="cert-year">2025</span>
+          <a href="#" class="cert-link" data-bs-toggle="modal" data-bs-target="#cert1Modal">Verify</a>
+        </div>
+      </div>
+
+      <!-- CERT 2 -->
+      <div class="cert-item">
+        <div class="cert-left">
+          <div class="cert-name">Data Analytics Internship</div>
+          <div class="cert-org">Deloitte</div>
+        </div>
+        <div class="cert-right">
+          <span class="cert-year">2025</span>
+          <a href="#" class="cert-link" data-bs-toggle="modal" data-bs-target="#cert2Modal">Verify</a>
+        </div>
+      </div>
+
+      <!-- CERT 3 -->
+      <div class="cert-item">
+        <div class="cert-left">
+          <div class="cert-name">Python for Data Science</div>
+          <div class="cert-org">Coursera</div>
+        </div>
+        <div class="cert-right">
+          <span class="cert-year">2024</span>
+          <a href="#" class="cert-link" data-bs-toggle="modal" data-bs-target="#cert3Modal">Verify</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= MODALS ================= -->
+
+<!-- CERT 1 MODAL -->
+<div class="modal fade" id="cert1Modal">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content" style="background:#000; border:none; position:relative;">
+
+      <button style="position:absolute; top:10px; right:10px; z-index:10;"
+              class="btn btn-light" data-bs-dismiss="modal">X</button>
+
+      <div class="modal-body p-0">
+       <img src="certificates/Internship Completion Letter.jpg"
+             alt="Certificate"
+             style="
+               width:100%;
+               max-height:80vh;
+               object-fit:contain;
+               border-radius:12px;
+             ">
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- CERT 2 MODAL (IMAGE) -->
+<div class="modal fade" id="cert2Modal">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content" style="background:#000; border:none; position:relative;">
+
+      <!-- Close Button -->
+      <button class="btn btn-light"
+              style="position:absolute; top:10px; right:10px; z-index:10;"
+              data-bs-dismiss="modal">
+        X
+      </button>
+
+      <!-- Title -->
+      <div style="color:#fff; padding:10px 20px; font-weight:600;">
+        Deloitte Australia Data Analytics Simulation (Forage)
+      </div>
+
+      <!-- IMAGE VIEW -->
+      <div class="modal-body text-center p-2">
+
+        <img src="certificates/delloite.jpg"
+             alt="Deloitte Certificate"
+             style="
+               width:100%;
+               max-height:80vh;
+               object-fit:contain;
+               border-radius:12px;
+             ">
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- CERT 3 MODAL -->
+<div class="modal fade" id="cert3Modal">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content" style="background:#000; border:none; position:relative;">
+
+      <button style="position:absolute; top:10px; right:10px; z-index:10;"
+              class="btn btn-light" data-bs-dismiss="modal">X</button>
+
+      <div class="modal-body p-0">
+        <iframe src="certificates/python.pdf"
+                width="100%" height="600px"
+                style="border:none;">
+        </iframe>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- contact section -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="contact-wrapper">
+
+      <div class="contact-left">
+        <span class="contact-label">Contact</span>
+        <h2 class="contact-title">Let’s Build Something Meaningful</h2>
+        <p class="contact-text">
+          I’m open to opportunities, collaborations, and conversations around
+          data science, machine learning, and practical problem-solving.
+          Feel free to connect with me.
+        </p>
+
+
+        
+        <div class="contact-info-list">
+
+          <!-- Phone -->
+          <div class="contact-info-item">
+            <a href="tel:+919970328355" class="contact-info-link">
+              <i class="fa-solid fa-phone" style="color:#22c55e;"></i>
+              <strong>Phone: </strong>&nbsp;9970328355
+            </a>
+          </div>
+
+          <!-- Email -->
+          <div class="contact-info-item">
+            <a href="mailto:shreenathkp16@gmail.com" class="contact-info-link">
+              <i class="fa-solid fa-envelope" style="color:#EA4335;"></i>
+              <strong>Email: </strong>&nbsp;shreenathkp16@gmail.com
+            </a>
+          </div>
+
+          <!-- GitHub -->
+          <div class="contact-info-item">
+            <a href="https://github.com/Shreekp16" target="_blank" class="contact-info-link">
+              <i class="fa-brands fa-github" style="color:#ffffff;"></i>
+              <strong>GitHub: </strong>&nbsp;github.com/Shreekp16
+            </a>
+          </div>
+
+          <!-- LeetCode -->
+          <div class="contact-info-item">
+            <a href="https://leetcode.com/u/shreenath_Pangal/" target="_blank" class="contact-info-link">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" style="width:18px; height:18px; object-fit:contain; ">
+              <strong>LeetCode: </strong>&nbsp;leetcode.com/shreenath_Pangal
+            </a>
+          </div>
+
+          <!-- LinkedIn -->
+          <div class="contact-info-item">
+            <a href="https://www.linkedin.com/in/shreenath-pangal-82b4103a8/" target="_blank" class="contact-info-link">
+              <i class="fa-brands fa-linkedin" style="color:#0A66C2;"></i>
+              <strong>LinkedIn: </strong>&nbsp;linkedin.com/in/shreenath-pangal
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <div class="contact-panel">
+          <div class="contact-panel-top">
+            <span class="contact-status-dot"></span>
+            <span class="contact-status-text">Available for opportunities</span>
+          </div>
+
+          <h3 class="contact-panel-title">Quick Reach</h3>
+          <p class="contact-panel-text">
+            The best way to reach me is by email or LinkedIn. I’m interested in
+            internships, entry-level roles, and project collaborations.
+          </p>
+
+          <div class="contact-action-list">
+            <a href="mailto:shreenathkp16@gmail.com" class="contact-main-btn">Send Email</a>
+            <a
+              href="https://www.linkedin.com/in/shreenath-pangal-82b4103a8/"
+              target="_blank"
+              class="contact-outline-btn"
+            >
+              Connect on LinkedIn
+            </a>
+          </div>
+
+          <div class="contact-mini-note">
+            Usually responds within a reasonable time.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- footer  -->
+<footer class="footer-section">
+  <div class="container text-center">
+
+    <h3 class="footer-name">Shreenath Pangal</h3>
+
+    <p class="footer-tagline">
+      Data Science • Machine Learning • Problem Solving
+    </p>
+
+   <div class="footer-socials">
+
+        <!-- Email -->
+        <a href="mailto:shreenathkp16@gmail.com" target="_blank">
+            <i class="fa-solid fa-envelope" style="background: linear-gradient(45deg, #EA4335, #FBBC05, #34A853, #4285F4); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
+        </a>
+        <!-- GitHub -->
+        <a href="https://github.com/Shreekp16" target="_blank">
+          <i class="fa-brands fa-github" style="color:#ffffff;"></i>
+        </a>
+        <!-- LeetCode -->
+        <a href="https://leetcode.com/u/shreenath_Pangal/" target="_blank" style="margin-left:0 px;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
+              alt="LeetCode"
+              style="width:20px; height:20px;">
+        </a>
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/shreenath-pangal-82b4103a8/" target="_blank">
+          <i class="fa-brands fa-linkedin" style="color:#0A66C2;"></i>
+        </a>
+        <!-- Twitter -->
+        <a href="#" target="_blank">
+          <i class="fa-brands fa-twitter" style="color:#1DA1F2;"></i>
+        </a>
+      </div>
+    <div class="footer-bottom">
+      © 2026 Shreenath Pangal. All rights reserved.
+    </div>
+
+  </div>
+</footer>
+</body>
+</html>
